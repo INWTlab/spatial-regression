@@ -1,12 +1,14 @@
-### Erweiterung für: Multivariate Kerndichteschätzung bei anonymisierten Geokoordinaten
-* Wichtigstes Referenzpaper: https://academic.oup.com/jrsssa/article/180/1/161/7068203.
-* Die Erweiterung ist das Einbeziehen eines Regressionsmodells bei der Schätzung der Dichte der Koordinaten.
-* Die Vergleichsmethode ist im Paket KernelHeaping als Funktion dbivr implementiert: https://cran.r-project.org/web/packages/Kernelheaping/index.html.
+## PoC: Extension of Multivariate Kernel Density Estimation with Anonymized Geo-coordinates
 
-### Nutzungshinweise
-* Das Skript evaluation.R aus dem inst/scripts Ordner enthält den Code für den Start von Simulationsstudien, die die Erweiterung 
-mit der dbivr Methode vergleichen.
-* Das Skript nutzt dabei folgende Funktionalitäten, die als Funktionen in separaten Skripten bereitgestellt sind und per source-Befehl aufgerufen werden:
-  * Generierung von simulierten Geokoordinaten-Datensätzen.
-  * Schätzung der Dichte der Koordinaten mit der Erweiterung und der dbivr Methode.
-  * Parametrisierte Funktion für die Durchführung einer Simulationsstudie und Berechnung der Vergleichsmetriken.
+* **Key Reference Paper:** [https://academic.oup.com/jrsssa/article/180/1/161/7068203](https://academic.oup.com/jrsssa/article/180/1/161/7068203).
+* **The Extension:** Incorporating a regression model into the density estimation of coordinates.
+* **Comparison Method:** Implemented as the `dbivr` function in the **KernelHeaping** package: [https://cran.r-project.org/web/packages/Kernelheaping/index.html](https://cran.r-project.org/web/packages/Kernelheaping/index.html).
+
+---
+
+### Usage Instructions
+* The script `evaluation.R` (found in the `inst/scripts` folder) contains the code to run simulation studies comparing the extension with the `dbivr` method.
+* The script utilizes the following functionalities, which are provided as functions in separate scripts and called via the `source` command:
+    * **Generation** of simulated geo-coordinate datasets.
+    * **Estimation** of coordinate density using both the extension and the `dbivr` method.
+    * Parameterized function for conducting simulation studies and calculating **comparison** metrics.
